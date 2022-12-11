@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini desafio</title>
+    <style>
+        body{ font: normal 12pt Arial; }
+        #res{font-size: 12pt; padding-top: 30px;}
+    </style>
+</head>
+<body>
+    <h1>Sistema de nacionalidade</h1>
+    Em que pais você nasceu?<input type="text" id="pais">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function calcular() {
+            var a = window.document.getElementById('pais')
+            var res = window.document.querySelector('div#res')
+            var resposta = (a.value)
+            if (resposta == 'Brasil' || ' brasil') {
+                res.innerHTML = (`Você nasceu no ${resposta}, portando é um cidadão brasileiro!` )
+            } else {
+                res.innerHTML = (`Você nasceu em outro País, portando é um cidadão estrangeiro. Seu País de origem é ${resposta}.`)
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interangindo com o botão</title>
+    <style>
+        div#click{
+            font: bold 12pt Arial;
+            background-color: gray;
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+       <!-- Estou usando o DOM e fazendo a ligação por tag no HTML-->
+
+    <h1>Interangindo com um botão</h1>
+    
+        <div id="click">Clique em mim</div>
+
+
+    <script>
+        var a = window.document.getElementById('click')
+            a.addEventListener('click', clicou)
+            
+            function clicou() {    
+                window.alert ('Você acabou de clicar em um botão!')
+            }
+    </script>
+</body>
+</html>
